@@ -1,14 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<search>
-  <entry>
-    <title><![CDATA[Markdown基本语法]]></title>
-    <url>%2F2018%2F12%2F20%2FMarkdown%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95%2F</url>
-    <content type="text"><![CDATA[标题1234# 一级标题## 二级标题### 三级标题...以此类推最多六级 一级标题二级标题三级标题 列表123- 列表1- 列表2- 列表3 列表1 列表2子列表1子列表2 列表3 链接1[链接](https://github.com/2500639734) 链接 图片1![图片](https://www.baidu.com/img/baidu_jgylogo3.gif) 斜体1*斜体* 斜体 粗体1**粗体** 粗体 代码片段1234public static void main(String[] arrs)&#123; System.out.println(&quot;单行代码左右分别使用一个`符号包裹&quot;); System.out.println(&quot;多行上下分别使用三个```符号包裹&quot;);&#125; 引用1&gt; 引用 引用 分割线1---或者***]]></content>
+<search> 
+  
+    
+    <entry>
+      <title>Markdown基本语法</title>
+      <link href="/2018/12/20/Markdown%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/"/>
+      <url>/2018/12/20/Markdown%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/</url>
+      
+        <content type="html"><![CDATA[<h1 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># 一级标题</span><br><span class="line">## 二级标题</span><br><span class="line">### 三级标题</span><br><span class="line">...以此类推最多六级</span><br></pre></td></tr></table></figure><h1 id="一级标题"><a href="#一级标题" class="headerlink" title="一级标题"></a>一级标题</h1><h2 id="二级标题"><a href="#二级标题" class="headerlink" title="二级标题"></a>二级标题</h2><h3 id="三级标题"><a href="#三级标题" class="headerlink" title="三级标题"></a>三级标题</h3><hr><h1 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">- 列表1</span><br><span class="line">- 列表2</span><br><span class="line">- 列表3</span><br></pre></td></tr></table></figure><ul><li>列表1</li><li>列表2<br>子列表1<br>子列表2</li><li>列表3</li></ul><hr><h1 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[链接](https://github.com/2500639734)</span><br></pre></td></tr></table></figure><p><a href="https://github.com/2500639734" target="_blank" rel="noopener">链接</a></p><hr><h1 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![图片](https://www.baidu.com/img/baidu_jgylogo3.gif)</span><br></pre></td></tr></table></figure><p><img src="https://www.baidu.com/img/baidu_jgylogo3.gif" alt="图片"></p><hr><h1 id="斜体"><a href="#斜体" class="headerlink" title="斜体"></a>斜体</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">*斜体*</span><br></pre></td></tr></table></figure><p><em>斜体</em></p><h1 id="粗体"><a href="#粗体" class="headerlink" title="粗体"></a>粗体</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">**粗体**</span><br></pre></td></tr></table></figure><p><strong>粗体</strong></p><hr><h1 id="代码片段"><a href="#代码片段" class="headerlink" title="代码片段"></a>代码片段</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">public static void main(String[] arrs)&#123;</span><br><span class="line">System.out.println(&quot;单行代码左右分别使用一个`符号包裹&quot;);</span><br><span class="line">System.out.println(&quot;多行上下分别使用三个```符号包裹&quot;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><hr><h1 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt; 引用</span><br></pre></td></tr></table></figure><blockquote><p>引用</p></blockquote><hr><h1 id="分割线"><a href="#分割线" class="headerlink" title="分割线"></a>分割线</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">---或者***</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
       <categories>
-        <category>写作</category>
+          
+          <category> 写作 </category>
+          
       </categories>
-      <tags>
-        <tag>Markdown</tag>
-      </tags>
-  </entry>
+      
+      
+        <tags>
+            
+            <tag> Markdown </tag>
+            
+        </tags>
+      
+    </entry>
+    
+  
+  
 </search>
