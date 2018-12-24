@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Linux设置主机名称和映射]]></title>
+    <url>%2F2018%2F12%2F24%2FLinux%E8%AE%BE%E7%BD%AE%E4%B8%BB%E6%9C%BA%E5%90%8D%E7%A7%B0%2F</url>
+    <content type="text"><![CDATA[临时修改主机名称 hostname查看主机名称 hostname name临时修改主机名称(系统重启后失效) 永久修改主机名称 vi /etc/sysconfig/network HOSTNAME master(主机名称不要带有_) 配置主机名称映射 vi /etc/hosts 添加如下内容 192.168.1.10 master(配置完成后ping主机名称会映射到对应ip)]]></content>
+      <tags>
+        <tag>Linux基础</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Linux基础目录说明]]></title>
     <url>%2F2018%2F12%2F23%2FLinux%E5%9F%BA%E7%A1%80%E7%9B%AE%E5%BD%95%E4%BB%8B%E7%BB%8D%2F</url>
     <content type="text"><![CDATA[linux目录结构123456789101112131415161718192021/bin：是Binary的缩写，这个目录存放着系统必备执行命令/boot：这里存放的是启动Linux时使用的一些核心文件，包括一些连接文件以及镜像文件，自己的安装别放这里/dev：Device(设备)的缩写，该目录下存放的是Linux的外部设备，在Linux中访问设备的方式和访问文件的方式是相同的。/etc：所有的系统管理所需要的配置文件和子目录。/home：存放普通用户的主目录，在Linux中每个用户都有一个自己的目录，一般该目录名是以用户的账号命名的。/lib：系统开机所需要最基本的动态连接共享库，其作用类似于Windows里的DLL文件。几乎所有的应用程序都需要用到这些共享库。/lost+found：这个目录一般情况下是空的，当系统非法关机后，这里就存放了一些文件。/media：linux系统会自动识别一些设备，例如U盘、光驱等等，当识别后，linux会把识别的设备挂载到这个目录下。/misc: 该目录可以用来存放杂项文件或目录，即那些用途或含义不明确的文件或目录可以存放在该目录下。/mnt：系统提供该目录是为了让用户临时挂载别的文件系统的，我们可以将光驱挂载在/mnt/上，然后进入该目录就可以查看光驱里的内容了。/net 存放着和网络相关的一些文件./opt：这是给主机额外安装软件所摆放的目录。比如你安装一个ORACLE数据库则就可以放到这个目录下。默认是空的。/proc：这个目录是一个虚拟的目录，它是系统内存的映射，我们可以通过直接访问这个目录来获取系统信息。/root：该目录为系统管理员，也称作超级权限者的用户主目录。/sbin：s就是Super User的意思，这里存放的是系统管理员使用的系统管理程序。/selinux：这个目录是Redhat/CentOS所特有的目录，Selinux是一个安全机制，类似于windows的防火墙/srv：service缩写，该目录存放一些服务启动之后需要提取的数据。/sys： 这是linux2.6内核的一个很大的变化。该目录下安装了2.6内核中新出现的一个文件系统 sysfs 。/tmp：这个目录是用来存放一些临时文件的。/usr： 这是一个非常重要的目录，用户的很多应用程序和文件都放在这个目录下，类似与windows下的program files目录。/var：这个目录中存放着在不断扩充着的东西，我们习惯将那些经常被修改的目录放在这个目录下。包括各种日志文件。]]></content>
