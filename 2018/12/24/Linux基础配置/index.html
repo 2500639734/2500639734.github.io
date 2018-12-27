@@ -120,7 +120,7 @@
 <meta property="og:site_name" content="blog">
 <meta property="og:description" content="Linux基础配置">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-12-27T14:50:25.177Z">
+<meta property="og:updated_time" content="2018-12-27T14:58:23.911Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux基础配置">
 <meta name="twitter:description" content="Linux基础配置">
@@ -371,6 +371,28 @@
           </span>
 
           
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/Linux/" itemprop="url" rel="index">
+                    <span itemprop="name">Linux</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -489,51 +511,38 @@
 </li>
 </ul>
 <hr>
-<h1 id="配置yum仓库"><a href="#配置yum仓库" class="headerlink" title="配置yum仓库"></a>配置yum仓库</h1><ul>
-<li><code>yum install -y httpd</code>安装<code>httpd</code>并确认安装</li>
-<li><code>yum list</code>列出所有可用的<code>package</code>和<code>package</code>组</li>
-<li><code>yum clean all</code>清除所有缓冲数据</li>
-<li><code>yum deplist httpd</code>功能描述：列出一个包所有依赖的包</li>
-<li><code>yum remove httpd</code>删除<code>httpd</code></li>
-<li><p>配置国内仓库镜像(以Centos6为例)</p>
-<ul>
-<li><a href="http://mirrors.163.com/.help/centos.html" target="_blank" rel="noopener">国内镜像地址</a>下载<code>CentOS5</code>或<code>CentOS6</code>或<code>CentOS7</code></li>
-<li><code>mv CentOS6-Base-163.repo /etc/yum.repos.d/</code>移动文件到<code>/etc/yum.repos.d</code>目录</li>
-<li><code>mv CentOS6-Base-163.repo  CentOS-Base.rep</code>用<code>CentOS6-Base-163.repo</code>替换<code>CentOS-Base.rep</code></li>
-<li><code>cd /etc/yum.repos.d/</code>,<code>cp CentOS-Base.repo  CentOS-Base.repo.bak</code>备份原有的<code>yum</code>源配置文件</li>
-<li><p><code>vi CentOS-Base.repo</code>配置</p>
+<h1 id="配置yum仓库"><a href="#配置yum仓库" class="headerlink" title="配置yum仓库"></a>配置yum仓库</h1><h3 id="yum常用命令"><a href="#yum常用命令" class="headerlink" title="yum常用命令"></a>yum常用命令</h3><pre><code>- `yum install -y httpd`安装`httpd`并确认安装
+- `yum list`列出所有可用的`package`和`package`组
+- `yum clean all`清除所有缓冲数据
+- `yum deplist httpd`功能描述：列出一个包所有依赖的包
+- `yum remove httpd`删除`httpd`
+</code></pre><h3 id="配置国内仓库镜像-以Centos6为例"><a href="#配置国内仓库镜像-以Centos6为例" class="headerlink" title="配置国内仓库镜像(以Centos6为例)"></a>配置国内仓库镜像(以Centos6为例)</h3><pre><code>- [国内镜像地址](http://mirrors.163.com/.help/centos.html)下载`CentOS5`或`CentOS6`或`CentOS7`
+- `mv CentOS6-Base-163.repo /etc/yum.repos.d/`移动文件到`/etc/yum.repos.d`目录
+- `mv CentOS6-Base-163.repo  CentOS-Base.rep`用`CentOS6-Base-163.repo`替换`CentOS-Base.rep`
+- `cd /etc/yum.repos.d/`,`cp CentOS-Base.repo  CentOS-Base.repo.bak`备份原有的`yum`源配置文件
+- `vi CentOS-Base.repo`配置
 <figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">name</span>=CentOS-<span class="variable">$releasever</span> - Base - <span class="number">163</span>.com</span><br><span class="line"><span class="attr">baseurl</span>=http://mirrors.<span class="number">163</span>.com/centos/<span class="variable">$releasever</span>/os/<span class="variable">$basearch</span>/</span><br><span class="line"><span class="attr">gpgcheck</span>=<span class="number">1</span></span><br><span class="line"><span class="attr">gpgkey</span>=http://mirrors.centos.org/centos/RPM-GPG-KEY-CentOS-<span class="number">6</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p><code>yum clean all</code>,<code>yum makecache</code>依次执行完成安装</p>
-</li>
-</ul>
-</li>
-<li><p>配置本地仓库镜像</p>
-<ul>
-<li>准备一台<code>Linux</code>服务器,版本<code>CentOS-6.8-x86_64-bin-DVD1.iso</code>,配置好服务器<code>ip</code></li>
-<li><code>mkdir /mnt/cdrom</code>,<code>mount -t iso9660 /dev/cdrom /mnt/cdrom</code>将<code>CentOS-6.8-x86_64-bin-DVD1.iso</code>镜像挂载到<code>/mnt/cdrom</code>目录</li>
-<li><code>cd /etc/yum.repos.d/</code>,<code>cp CentOS-Base.repo  CentOS-Base.repo.bak</code>备份原有的<code>yum</code>源配置文件</li>
-<li><p><code>vi CentOS-Base.repo</code>编辑<code>CentOS-Base.repo</code>文件</p>
-<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">[base]</span></span><br><span class="line"><span class="attr">name</span>=CentOS-Local</span><br><span class="line"><span class="attr">baseurl</span>=file:///var/iso</span><br><span class="line"><span class="attr">gpgcheck</span>=<span class="number">1</span></span><br><span class="line"><span class="attr">enabled</span>=<span class="number">1</span></span><br><span class="line"><span class="attr">gpgkey</span>=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-<span class="number">6</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p><code>yum clean all</code>清除<code>yum</code>缓冲</p>
-</li>
-<li><code>yum repolist</code>列出可用的<code>yum</code>源</li>
-<li><code>yum install -y httpd</code>安装相应的软件</li>
-<li><code>yum.repos.d]#service httpd start</code>开启httpd使用浏览器访问<a href="http://192.168.11.101:80(如果访问不通，检查防火墙是否开启了80端口或关闭防火墙)" target="_blank" rel="noopener">http://192.168.11.101:80(如果访问不通，检查防火墙是否开启了80端口或关闭防火墙)</a></li>
-<li><code>cp -r /mnt/cdrom/ /var/www/html/CentOS</code>将<code>yum</code>源配置到<code>httpd(Apache Server)</code>中，其他的服务器即可通过网络访问这个内网中的<code>yum</code>源了</li>
-<li><code>umount /mnt/cdrom</code>取消先前挂载的镜像</li>
-<li><code>http://192.168.11.101/CentOS/</code>浏览器中访问</li>
-<li><code>cd /etc/yum.repos.d/</code>,<code>cp CentOS-Base.repo  CentOS-Base.repo.bak</code>备份使用机器上的<code>yum</code>源</li>
-<li><p><code>vi CentOS-Base.repo</code>让其他需要安装<code>rpm</code>包的服务器指向这个yum源</p>
-<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">[base]</span></span><br><span class="line"><span class="attr">name</span>=CentOS-hadoop101</span><br><span class="line"><span class="attr">baseurl</span>=http://<span class="number">192.168</span>.<span class="number">11.101</span>/CentOS</span><br><span class="line"><span class="attr">gpgcheck</span>=<span class="number">1</span></span><br><span class="line"><span class="attr">gpgkey</span>=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-<span class="number">6</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p><code>yum clean all</code>,<code>yum repolist</code>使用机器上执行更新配置</p>
-</li>
-</ul>
-</li>
-</ul>
 
+- `yum clean all`,`yum makecache`依次执行完成安装
+</code></pre><h3 id="配置本地仓库镜像"><a href="#配置本地仓库镜像" class="headerlink" title="配置本地仓库镜像"></a>配置本地仓库镜像</h3><pre><code>- 准备一台`Linux`服务器,版本`CentOS-6.8-x86_64-bin-DVD1.iso`,配置好服务器`ip`
+- `mkdir /mnt/cdrom`,`mount -t iso9660 /dev/cdrom /mnt/cdrom`将`CentOS-6.8-x86_64-bin-DVD1.iso`镜像挂载到`/mnt/cdrom`目录
+- `cd /etc/yum.repos.d/`,`cp CentOS-Base.repo  CentOS-Base.repo.bak`备份原有的`yum`源配置文件
+- `vi CentOS-Base.repo`编辑`CentOS-Base.repo`文件
+<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">[base]</span></span><br><span class="line"><span class="attr">name</span>=CentOS-Local</span><br><span class="line"><span class="attr">baseurl</span>=file:///var/iso</span><br><span class="line"><span class="attr">gpgcheck</span>=<span class="number">1</span></span><br><span class="line"><span class="attr">enabled</span>=<span class="number">1</span></span><br><span class="line"><span class="attr">gpgkey</span>=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-<span class="number">6</span></span><br></pre></td></tr></table></figure>
+
+- `yum clean all`清除`yum`缓冲
+- `yum repolist`列出可用的`yum`源
+- `yum install -y httpd`安装相应的软件
+- `yum.repos.d]#service httpd start`开启`httpd`使用浏览器访问[访问地址,以实际`ip`为准](http://192.168.11.101:80)如果访问不通,检查防火墙是否开启了80端口或关闭防火墙
+- `cp -r /mnt/cdrom/ /var/www/html/CentOS`将`yum`源配置到`httpd(Apache Server)`中，其他的服务器即可通过网络访问这个内网中的`yum`源了
+- `umount /mnt/cdrom`取消先前挂载的镜像
+- `http://192.168.11.101/CentOS/`浏览器中访问
+- `cd /etc/yum.repos.d/`,`cp CentOS-Base.repo  CentOS-Base.repo.bak`备份使用机器上的`yum`源
+- `vi CentOS-Base.repo`让其他需要安装`rpm`包的服务器指向这个yum源
+<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">[base]</span></span><br><span class="line"><span class="attr">name</span>=CentOS-hadoop101</span><br><span class="line"><span class="attr">baseurl</span>=http://<span class="number">192.168</span>.<span class="number">11.101</span>/CentOS</span><br><span class="line"><span class="attr">gpgcheck</span>=<span class="number">1</span></span><br><span class="line"><span class="attr">gpgkey</span>=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-<span class="number">6</span></span><br></pre></td></tr></table></figure>
+
+- `yum clean all`,`yum repolist`使用机器上执行更新配置
+</code></pre>
       
     </div>
     
@@ -789,7 +798,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#国内Centos镜像"><span class="nav-number">1.</span> <span class="nav-text">国内Centos镜像</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#VmWare破解密匙"><span class="nav-number">2.</span> <span class="nav-text">VmWare破解密匙</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Linux目录结构"><span class="nav-number">3.</span> <span class="nav-text">Linux目录结构</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#配置静态ip和网络"><span class="nav-number">4.</span> <span class="nav-text">配置静态ip和网络</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#配置主机名称"><span class="nav-number">5.</span> <span class="nav-text">配置主机名称</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#配置防火墙"><span class="nav-number">6.</span> <span class="nav-text">配置防火墙</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#关机重启"><span class="nav-number">7.</span> <span class="nav-text">关机重启</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#配置中文编码"><span class="nav-number">8.</span> <span class="nav-text">配置中文编码</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#配置yum仓库"><span class="nav-number">9.</span> <span class="nav-text">配置yum仓库</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#国内Centos镜像"><span class="nav-number">1.</span> <span class="nav-text">国内Centos镜像</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#VmWare破解密匙"><span class="nav-number">2.</span> <span class="nav-text">VmWare破解密匙</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Linux目录结构"><span class="nav-number">3.</span> <span class="nav-text">Linux目录结构</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#配置静态ip和网络"><span class="nav-number">4.</span> <span class="nav-text">配置静态ip和网络</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#配置主机名称"><span class="nav-number">5.</span> <span class="nav-text">配置主机名称</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#配置防火墙"><span class="nav-number">6.</span> <span class="nav-text">配置防火墙</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#关机重启"><span class="nav-number">7.</span> <span class="nav-text">关机重启</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#配置中文编码"><span class="nav-number">8.</span> <span class="nav-text">配置中文编码</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#配置yum仓库"><span class="nav-number">9.</span> <span class="nav-text">配置yum仓库</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#yum常用命令"><span class="nav-number">9.0.1.</span> <span class="nav-text">yum常用命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置国内仓库镜像-以Centos6为例"><span class="nav-number">9.0.2.</span> <span class="nav-text">配置国内仓库镜像(以Centos6为例)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置本地仓库镜像"><span class="nav-number">9.0.3.</span> <span class="nav-text">配置本地仓库镜像</span></a></li></ol></li></ol></div>
             
 
           </div>
