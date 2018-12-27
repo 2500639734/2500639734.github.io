@@ -120,7 +120,7 @@
 <meta property="og:site_name" content="blog">
 <meta property="og:description" content="Linux基础配置">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-12-27T14:43:55.188Z">
+<meta property="og:updated_time" content="2018-12-27T14:50:25.177Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux基础配置">
 <meta name="twitter:description" content="Linux基础配置">
@@ -490,19 +490,19 @@
 </ul>
 <hr>
 <h1 id="配置yum仓库"><a href="#配置yum仓库" class="headerlink" title="配置yum仓库"></a>配置yum仓库</h1><ul>
-<li><code>yum install -y httpd</code>安装httpd并确认安装</li>
-<li><code>yum list</code>列出所有可用的package和package组</li>
+<li><code>yum install -y httpd</code>安装<code>httpd</code>并确认安装</li>
+<li><code>yum list</code>列出所有可用的<code>package</code>和<code>package</code>组</li>
 <li><code>yum clean all</code>清除所有缓冲数据</li>
 <li><code>yum deplist httpd</code>功能描述：列出一个包所有依赖的包</li>
-<li><code>yum remove httpd</code>删除httpd</li>
+<li><code>yum remove httpd</code>删除<code>httpd</code></li>
 <li><p>配置国内仓库镜像(以Centos6为例)</p>
 <ul>
-<li>[<a href="http://mirrors.163.com/.help/centos.html]下载`CentOS5`或`CentOS6`或`CentOS7`" target="_blank" rel="noopener">http://mirrors.163.com/.help/centos.html]下载`CentOS5`或`CentOS6`或`CentOS7`</a></li>
+<li><a href="http://mirrors.163.com/.help/centos.html" target="_blank" rel="noopener">国内镜像地址</a>下载<code>CentOS5</code>或<code>CentOS6</code>或<code>CentOS7</code></li>
 <li><code>mv CentOS6-Base-163.repo /etc/yum.repos.d/</code>移动文件到<code>/etc/yum.repos.d</code>目录</li>
 <li><code>mv CentOS6-Base-163.repo  CentOS-Base.rep</code>用<code>CentOS6-Base-163.repo</code>替换<code>CentOS-Base.rep</code></li>
 <li><code>cd /etc/yum.repos.d/</code>,<code>cp CentOS-Base.repo  CentOS-Base.repo.bak</code>备份原有的<code>yum</code>源配置文件</li>
 <li><p><code>vi CentOS-Base.repo</code>配置</p>
-<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">name</span>=CentOS-<span class="variable">$releasever</span> - Base - <span class="number">163</span>.com</span><br><span class="line"><span class="attr">baseurl</span>=http://mirrors.<span class="number">163</span>.com/centos/<span class="variable">$releasever</span>/os/<span class="variable">$basearch</span>/</span><br><span class="line"><span class="attr">gpgcheck</span>=<span class="number">1</span></span><br><span class="line"><span class="attr">enabled</span>=<span class="number">1</span></span><br><span class="line"><span class="attr">gpgkey</span>=http://mirrors.<span class="number">163</span>.com/.help/centos/RPM-GPG-KEY-CentOS-<span class="number">6</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">name</span>=CentOS-<span class="variable">$releasever</span> - Base - <span class="number">163</span>.com</span><br><span class="line"><span class="attr">baseurl</span>=http://mirrors.<span class="number">163</span>.com/centos/<span class="variable">$releasever</span>/os/<span class="variable">$basearch</span>/</span><br><span class="line"><span class="attr">gpgcheck</span>=<span class="number">1</span></span><br><span class="line"><span class="attr">gpgkey</span>=http://mirrors.centos.org/centos/RPM-GPG-KEY-CentOS-<span class="number">6</span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p><code>yum clean all</code>,<code>yum makecache</code>依次执行完成安装</p>
 </li>
