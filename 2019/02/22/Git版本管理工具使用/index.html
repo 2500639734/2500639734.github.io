@@ -101,7 +101,7 @@
 
 
 
-  <meta name="keywords" content="Linux基础,">
+  <meta name="keywords" content="Git,">
 
 
 
@@ -112,18 +112,18 @@
 
 
 
-<meta name="description" content="Linux常用命令">
-<meta name="keywords" content="Linux基础">
+<meta name="description" content="Git版本管理工具命令备忘和使用">
+<meta name="keywords" content="Git">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Linux常用命令">
-<meta property="og:url" content="https://2500639734.github.io/2018/12/25/Linux常用命令/index.html">
+<meta property="og:title" content="Git版本管理工具使用">
+<meta property="og:url" content="https://2500639734.github.io/2019/02/22/Git版本管理工具使用/index.html">
 <meta property="og:site_name" content="blog">
-<meta property="og:description" content="Linux常用命令">
+<meta property="og:description" content="Git版本管理工具命令备忘和使用">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-12-26T13:29:47.247Z">
+<meta property="og:updated_time" content="2019-02-22T07:12:58.720Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Linux常用命令">
-<meta name="twitter:description" content="Linux常用命令">
+<meta name="twitter:title" content="Git版本管理工具使用">
+<meta name="twitter:description" content="Git版本管理工具命令备忘和使用">
 
 
 
@@ -153,13 +153,13 @@
 
 
 
-  <link rel="canonical" href="https://2500639734.github.io/2018/12/25/Linux常用命令/">
+  <link rel="canonical" href="https://2500639734.github.io/2019/02/22/Git版本管理工具使用/">
 
 
 
 
 
-  <title>Linux常用命令 | blog</title>
+  <title>Git版本管理工具使用 | blog</title>
   
 
 
@@ -331,7 +331,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://2500639734.github.io/2018/12/25/Linux常用命令/">
+    <link itemprop="mainEntityOfPage" href="https://2500639734.github.io/2019/02/22/Git版本管理工具使用/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="shenke">
@@ -348,7 +348,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Linux常用命令</h1>
+          <h1 class="post-title" itemprop="name headline">Git版本管理工具使用</h1>
         
 
         <div class="post-meta">
@@ -360,8 +360,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-25T19:58:38+08:00">
-                2018-12-25
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-02-22T14:50:06+08:00">
+                2019-02-22
               </time>
             
 
@@ -383,8 +383,8 @@
               
               
                 <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/Linux/" itemprop="url" rel="index">
-                    <span itemprop="name">Linux</span>
+                  <a href="/categories/工具/" itemprop="url" rel="index">
+                    <span itemprop="name">工具</span>
                   </a>
                 </span>
 
@@ -401,8 +401,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/12/25/Linux常用命令/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2018/12/25/Linux常用命令/" itemprop="commentCount"></span>
+                <a href="/2019/02/22/Git版本管理工具使用/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/02/22/Git版本管理工具使用/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -429,7 +429,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  2.6k
+                  1.4k
                 </span>
               
 
@@ -441,7 +441,7 @@
 
           
               <div class="post-description">
-                  Linux常用命令
+                  Git版本管理工具命令备忘和使用
               </div>
           
 
@@ -458,420 +458,64 @@
       
 
       
-        <h1 id="帮助命令"><a href="#帮助命令" class="headerlink" title="帮助命令"></a>帮助命令</h1><p><code>man</code>获得帮助信息<br><code>help</code>获得shell内置命令的帮助信息</p>
-<hr>
-<h1 id="常用快捷键"><a href="#常用快捷键" class="headerlink" title="常用快捷键"></a>常用快捷键</h1><p>-<code>ctrl + c</code>停止进程<br>-<code>ctrl + i</code>清屏<br>-<code>ctrl + q</code>退出<br>-<code>table</code>自动补全<br>-<code>上下键</code>查找使用过的命令</p>
-<hr>
-<h1 id="文件命令"><a href="#文件命令" class="headerlink" title="文件命令"></a>文件命令</h1><ul>
-<li><code>pwd</code>查看当前目录的绝对路径</li>
-<li><code>ls</code>列出目录内容</li>
-<li><code>ls -a</code>列出目录内容,连同隐藏(<code>.</code>开头的文件)一起列出</li>
-<li><code>ll</code>列出目录内容(包含属性和权限信息)</li>
-<li><code>ls -al</code>列出全部目录内容(包含隐藏文件,属性和权限信息)</li>
-<li><code>mkdir</code>创建目录</li>
-<li><code>mkdir -p</code>创建多层目录</li>
-<li><code>touch</code>创建空文件</li>
-<li><code>cd</code>切换目录<ul>
-<li><code>cd ~</code>切换到用户根目录</li>
-<li><code>cd -</code>切换到上次所在目录</li>
-<li><code>cd ..</code>切换到上级目录</li>
-<li><code>cd -P</code>跳转到实际物理路径,而非快捷方式路径</li>
-</ul>
-</li>
-<li><code>cp</code>复制文件或目录</li>
-<li><code>rmdir</code>删除空目录</li>
-<li><code>rm</code>删除文件</li>
-<li><code>rm -rf</code>递归删除文件或目录</li>
-<li><code>cp</code>复制文件或目录</li>
-<li><code>cp -r</code>递归复制</li>
-<li><code>mv</code>移动文件或重命名文件</li>
-<li><code>mv -t</code>递归移动文件</li>
-<li><code>cat</code>查看文件<code>-n</code>列出行号(从第一行开始)</li>
-<li><code>tac</code>查看文件<code>-n</code>列出行号(从最后一行开始)</li>
-<li><code>more</code>查看文件(一页一页展示,空格或<code>=</code>或<code>ctrl + f</code>下一页,<code>ctrl + b</code>上一页,<code>n</code>显示行号)</li>
-<li><code>less</code>查看文件(<code>pageup</code> + <code>pagedown</code>翻页,<code>q:</code>退出,<code>/</code>或<code>?</code>搜索,<code>n</code>或<code>N</code>向上/向下查找搜索词语)</li>
-<li><code>head -n 行数</code>查看指定行数的文件内容</li>
-<li><code>tail -n 行数</code>查看文件内容,只看尾巴几行,<code>-f</code>实时追踪该文档的所有更新</li>
-<li><code>&gt;</code>覆盖写</li>
-<li><code>&gt;&gt;</code>追加写</li>
-<li><code>echo</code>输出变量</li>
-<li><code>ln -s 软链接名称 链接目录</code>创建软链接(相当于<code>windows</code>快捷方式)</li>
-<li><code>cd -P</code>进入软链接实际目录</li>
-<li><code>history</code>查看命令行历史</li>
-</ul>
-<hr>
-<h1 id="vi编辑命令"><a href="#vi编辑命令" class="headerlink" title="vi编辑命令"></a>vi编辑命令</h1><ul>
-<li>一般模式<ul>
-<li><code>yy</code>复制光标当前一行</li>
-<li><code>y数字y</code>复制一段(从第几行到第几行)</li>
-<li><code>p</code>箭头移动到目的行粘贴</li>
-<li><code>u</code>撤销上一步</li>
-<li><code>dd</code>删除光标当前行</li>
-<li><code>d数字行d</code>删除光标之后多少行(包含光标所在行)</li>
-<li><code>x</code>删除一个字母,相当于<code>del</code></li>
-<li><code>X</code>删除一个字母,相当于<code>Backspace</code></li>
-<li><code>yw</code>复制一个词</li>
-<li><code>dw</code>删除一个词</li>
-<li><code>shift + ^</code>移动到行头</li>
-<li><code>shift + $</code>移动到行尾</li>
-<li><code>数字 + shift + g</code>移动到目标行</li>
-<li><code>1 + shift + g</code>移动到页头</li>
-<li><code>shift + g</code>移动到页尾</li>
-</ul>
-</li>
-<li>编辑模式<ul>
-<li><code>i</code>当前光标前</li>
-<li><code>a</code>当前光标后</li>
-<li><code>o</code>当前光标的下一行</li>
-<li><code>Esc</code>退出编辑模式</li>
-</ul>
-</li>
-<li>指令模式<ul>
-<li><code>:</code>后输入(组合使用)<ul>
-<li><code>w</code>保存</li>
-<li><code>q</code>退出</li>
-<li><code>!</code>强制</li>
-</ul>
-</li>
-<li><code>n</code>后输入(组合使用)<ul>
-<li><code>/查找词语</code>,查找之后<code>n</code>查找下一个,<code>shift + n</code>查找上一个</li>
-<li><code>?查找词语</code>,查找之后<code>n</code>查找上一个,<code>shift + n</code>查找下一个</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<hr>
-<h1 id="时间日期"><a href="#时间日期" class="headerlink" title="时间日期"></a>时间日期</h1><ul>
-<li><code>date</code>显示当前时间</li>
-<li><code>date &quot;+%Y-%m-%d %H:%M:%S&quot;</code>按特定格式显示当前时间</li>
-<li><code>date -d &quot;next day&quot;</code>显示明天时间</li>
-<li><code>date -d &quot;yesterday&quot;</code>显示昨天时间</li>
-<li><code>date -d &quot;next week&quot;</code>显示下周时间</li>
-<li><code>date -d &quot;next monday&quot;</code>显示下周一时间</li>
-<li><code>date -s &quot;2018-12-12 00:00:00&quot;</code>设置系统时间</li>
-<li><code>cal</code>查看当前月日历</li>
-<li><code>cal -3</code>查看最近三个月的日历</li>
-<li><code>cal 2018</code>查看年份日历</li>
-</ul>
-<hr>
-<h1 id="用户管理"><a href="#用户管理" class="headerlink" title="用户管理"></a>用户管理</h1><ul>
-<li><code>useradd</code>添加新用户</li>
-<li><code>passwd</code>设置密码</li>
-<li><code>id</code>判断用户是否存在</li>
-<li><code>su</code>切换用户</li>
-<li><code>userdel</code>删除用户但保存用户目录</li>
-<li><code>userdel -r</code>删除用户和用户目录</li>
-<li><code>who</code>查看登录用户信息</li>
-<li><code>whoami</code>显示当前使用的用户名称</li>
-<li><code>who am i</code>显示登录用户名称</li>
-<li><code>usermod</code>修改用户<code>-g</code> 组名 用户名</li>
-<li>赋予普通用户<code>root</code>权限(如us)<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">vi /etc/sudoers,root下添加一行如下</span><br><span class="line">##Allow root to run any commands anywhere</span><br><span class="line">root ALL=(ALL) ALL</span><br><span class="line">us ALL=(ALL) ALL</span><br><span class="line">保存后su - us输入密码登录即可获取root权限</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<hr>
-<h1 id="用户组管理"><a href="#用户组管理" class="headerlink" title="用户组管理"></a>用户组管理</h1><ul>
-<li><code>groupadd</code>新增组</li>
-<li><code>groupdel</code>删除组</li>
-<li><code>groupmod</code>修改组<code>-n</code> 新组名 老组名</li>
-<li><code>cat /etc/group</code>查看创建了哪些组</li>
-</ul>
-<hr>
-<h1 id="文件权限"><a href="#文件权限" class="headerlink" title="文件权限"></a>文件权限</h1><ul>
-<li><code>-rw-r--r.1 root root 12月12 00:00 file.txt</code></li>
-<li><code>-drwxr-xr-x.2 root root 4096 12月12 00:00 file.txt</code></li>
-</ul>
-<table>
-<thead>
-<tr>
-<th>整体描述</th>
-<th>字符</th>
-<th>含义</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>文件权限</td>
-<td>第1位<code>-</code></td>
-<td>文件</td>
-</tr>
-<tr>
-<td>文件权限</td>
-<td>第1位<code>d</code></td>
-<td>文件夹</td>
-</tr>
-<tr>
-<td>用户主权限</td>
-<td>第2-4位<code>r</code></td>
-<td>读</td>
-</tr>
-<tr>
-<td>用户主权限</td>
-<td>第2-4位<code>w</code></td>
-<td>写</td>
-</tr>
-<tr>
-<td>用户主权限</td>
-<td>第2-4位<code>x</code></td>
-<td>执行</td>
-</tr>
-<tr>
-<td>用户主权限</td>
-<td>第2-4位<code>-</code></td>
-<td>没有权限</td>
-</tr>
-<tr>
-<td>用户组权限</td>
-<td>第5-7位<code>r</code></td>
-<td>读</td>
-</tr>
-<tr>
-<td>用户组权限</td>
-<td>第5-7位<code>w</code></td>
-<td>写</td>
-</tr>
-<tr>
-<td>用户组权限</td>
-<td>第5-7位<code>x</code></td>
-<td>执行</td>
-</tr>
-<tr>
-<td>用户组权限</td>
-<td>第5-7位<code>-</code></td>
-<td>没有权限</td>
-</tr>
-<tr>
-<td>其他用户权限</td>
-<td>第8-10位<code>r</code></td>
-<td>读</td>
-</tr>
-<tr>
-<td>其他用户权限</td>
-<td>第8-10位<code>w</code></td>
-<td>写</td>
-</tr>
-<tr>
-<td>其他用户权限</td>
-<td>第8-10位<code>x</code></td>
-<td>执行</td>
-</tr>
-<tr>
-<td>其他用户权限</td>
-<td>第8-10位<code>-</code></td>
-<td>没有权限</td>
-</tr>
-<tr>
-<td>链接数</td>
-<td>第11位<code>2</code></td>
-<td>链接数</td>
-</tr>
-<tr>
-<td>文件拥有者</td>
-<td>第12位<code>root</code></td>
-<td>文件拥有者</td>
-</tr>
-<tr>
-<td>用户组</td>
-<td>第13位<code>root</code></td>
-<td>用户组</td>
-</tr>
-<tr>
-<td>文件大小</td>
-<td>第14位<code>4096</code></td>
-<td>文件大小</td>
-</tr>
-<tr>
-<td>创建时间</td>
-<td>第15位<code>12月12 00:00</code></td>
-<td>创建时间</td>
-</tr>
-<tr>
-<td>文件名称</td>
-<td>第16位<code>file.txt</code></td>
-<td>文件名称</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li><p><code>chmod</code>改变文件权限</p>
-<ul>
-<li><code>字符方式</code><ul>
-<li><code>chmod u+x</code>对用户设置执行权限</li>
-<li><code>chmod g-w</code>对用户组设置只读权限</li>
-<li><code>chmod o+w</code>对其他用户设置写权限</li>
-<li><code>chmod a+x</code>对所有人设置执行权限</li>
-</ul>
-</li>
-<li><p><code>数字方式</code></p>
-<ul>
-<li><code>rwx</code>对应<code>111</code>二进制,十进制表示为<code>7</code></li>
-<li><code>111 = 7</code>,<code>110 = 6</code>,<code>100 = 4</code>,<code>1</code>代表有权限,<code>0</code>代表没有权限</li>
-<li><code>chmod</code>第一位数字表示用户权限,第二位数字表示用户组权限,第三位数字表示其他用户权限(十进制)</li>
-<li><code>chmod 777</code>对所有人设置读写和执行权限</li>
-<li><code>chmod 700</code>对用户设置读写和执行权限</li>
-<li><code>chmod 200</code>对用户设置写权限</li>
-<li><code>chmod 660</code>对用户和用户组设置读和执行权限</li>
-</ul>
-</li>
-<li><p><code>chown root</code>改变文件所有者为<code>root</code>(<code>root</code>用户操作)</p>
-</li>
-<li><code>chgrp root</code>改变文件所有组为<code>root</code>(<code>root</code>用户操作)</li>
-</ul>
-</li>
-</ul>
-<hr>
-<h1 id="磁盘分区"><a href="#磁盘分区" class="headerlink" title="磁盘分区"></a>磁盘分区</h1><ul>
-<li><code>fdisl -l</code>查看分区详情(<code>root</code>用户操作)</li>
-<li><code>df -h</code>查看硬盘详情</li>
-<li><code>mount/umount</code>挂载/卸载</li>
-<li><code>mount -t iso9660 -o rw /dev/cdrom /mnt/cdrom</code>挂载<code>iso</code>镜像到指定目录</li>
-<li><code>-t</code>表示输入,<code>iso9960</code>表示类型,<code>-o</code>表示输出,<code>rw</code>表示读写,文件目录,挂载目录</li>
-<li><code>umount /mnt/cdrom</code>卸载</li>
-</ul>
-<hr>
-<h1 id="搜索查找"><a href="#搜索查找" class="headerlink" title="搜索查找"></a>搜索查找</h1><p><code>find</code>查找文件或目录<br><code>find /home -name &quot;*.txt&quot;</code>查找<code>home</code>目录下后缀为<code>.txt</code>的文件<br><code>find /home -user root</code>查找<code>home</code>目录下所属<code>root</code>用户的文件<br><code>find /home -size +10</code>查找<code>home</code>目录下大于10的文件(<code>+n</code>大于,<code>-n</code>小于,<code>n</code>等于)<br><code>grep</code>输出文件内搜索字符串匹配的行<br><code>ls -l | grep ll.txt</code>查找当前目录下的<code>ll.txt</code>文件(<code>-n</code>输出行数)<br><code>which</code>查找命令所在目录<br><code>which ls</code>查找<code>ls</code>命令所在目录</p>
-<hr>
-<h1 id="进程线程"><a href="#进程线程" class="headerlink" title="进程线程"></a>进程线程</h1><ul>
-<li><code>ps -aux</code>查看系统中所有进程</li>
-<li><code>top</code>查看系统健康状态(<code>-d</code>设置刷新秒数,<code>q</code>退出)</li>
-<li><code>pstree</code>查看进程树(<code>-u</code>显示进程所属用户,<code>-p</code>显示进程<code>id</code>号)</li>
-<li><code>kill -9 pid</code>立即杀死进程</li>
-<li><code>netstat -anp</code>显示网络统计信息</li>
-</ul>
-<hr>
-<h1 id="压缩解压缩"><a href="#压缩解压缩" class="headerlink" title="压缩解压缩"></a>压缩解压缩</h1><ul>
-<li><code>gzip</code>压缩文件(只能压缩单独一个文件,不保留源文件)</li>
-<li><code>gunzip</code>解压缩文件(只能解压单独一个文件,不保留源文件)</li>
-<li><code>zip demo a.txt b.txt</code>压缩文件(可以压缩多个文件,保留源文件)</li>
-<li><code>unzip demo.zip</code>解压缩文件(可以解压多个文件,保留源文件)</li>
-<li><code>tar -zcvf demo.tar.gz a.txt b.txt</code>压缩文件</li>
-<li><code>tar -zvxf demo.tar.gz</code>压缩到当前目录</li>
-<li><code>tar -zvxf demo.tar.gz -C /home</code>压缩到指定目录</li>
-<li><code>-c</code>产生<code>.tar</code>打包文件,<code>-v</code>显示详细信息,<code>-f</code>指定压缩后的文件名,<code>-z</code>打包同时压缩,<code>-x</code>解压<code>.tar</code>文件</li>
-</ul>
-<hr>
-<h1 id="后台服务管理"><a href="#后台服务管理" class="headerlink" title="后台服务管理"></a>后台服务管理</h1><ul>
-<li><code>service network status</code>查看指定服务状态</li>
-<li><code>service network stop</code>停止指定服务</li>
-<li><code>service network start</code>启动指定服务</li>
-<li><code>service network restart</code>重启指定服务</li>
-<li><code>service --status -all</code>查看系统中的所有后台服务</li>
-<li><code>chkconfig</code>查看所有服务器自启配置</li>
-<li><code>chkconfig iptables off</code>关闭指定服务的自动启动</li>
-<li><code>chkconfig iptables on</code>开启指定服务的自动启动</li>
-</ul>
-<hr>
-<h1 id="系统定时任务"><a href="#系统定时任务" class="headerlink" title="系统定时任务"></a>系统定时任务</h1><ul>
-<li><code>crontab -e</code>编辑<code>crontab</code>定时任务</li>
-<li><code>crontab -l</code>查询<code>crontab</code>定时任务</li>
-<li><code>crontab -r</code>删除当前用户的所有<code>crontab</code>定时任务</li>
-<li><code>* * * * * echo &quot;hello&quot; &gt;&gt; /home/hello.txt</code>执行定时任务</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th>字符</th>
-<th>含义</th>
-<th>范围</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>第1个<code>*</code></td>
-<td>一天当中的第几分钟</td>
-<td>0-59</td>
-</tr>
-<tr>
-<td>第2个<code>*</code></td>
-<td>一天当中的第几小时</td>
-<td>0-23</td>
-</tr>
-<tr>
-<td>第3个<code>*</code></td>
-<td>一个月当中的第几天</td>
-<td>1-31</td>
-</tr>
-<tr>
-<td>第4个<code>*</code></td>
-<td>一年当中的第几月</td>
-<td>1-12</td>
-</tr>
-<tr>
-<td>第5个<code>*</code></td>
-<td>一周当中的星期几</td>
-<td>0-7(0和7都代表星期日)</td>
-</tr>
-</tbody>
-</table>
-<table>
-<thead>
-<tr>
-<th>特殊符号</th>
-<th>含义</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>*</code></td>
-<td>代表任何时间,比如第一个“*”就代表一小时中每分钟都执行一次的意思</td>
-</tr>
-<tr>
-<td><code>,</code></td>
-<td>代表不连续的时间,比如“0 8,12,16 <em> </em> * 命令”，就代表在每天的8点0分，12点0分，16点0分都执行一次命令</td>
-</tr>
-<tr>
-<td><code>-</code></td>
-<td>代表连续的时间范围。比如“0 5  <em>  </em>  1-6命令”，代表在周一到周六的凌晨5点0分执行命令</td>
-</tr>
-<tr>
-<td><code>*/n</code></td>
-<td>代表每隔多久执行一次。比如“<em>/10  </em>  <em>  </em>  *  命令”，代表每隔10分钟就执行一遍命令</td>
-</tr>
-</tbody>
-</table>
-<table>
-<thead>
-<tr>
-<th>时间</th>
-<th>特定时间执行命令</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>45 22 * * *</code></td>
-<td>在22点45分执行命令</td>
-</tr>
-<tr>
-<td><code>0 17 * * 1</code></td>
-<td>每周1 的17点0分执行命令</td>
-</tr>
-<tr>
-<td><code>0 5 1,15 * *</code></td>
-<td>每月1号和15号的凌晨5点0分执行命令</td>
-</tr>
-<tr>
-<td><code>40 4 * * 1-5</code></td>
-<td>每周一到周五的凌晨4点40分执行命令</td>
-</tr>
-<tr>
-<td><code>*/10 4 * * *</code></td>
-<td>每天的凌晨4点，每隔10分钟执行一次命令</td>
-</tr>
-<tr>
-<td><code>0 0 1,15 * 1</code></td>
-<td>每月1号和15号，每周1的0点0分都会执行命令。注意：星期几和几号最好不要同时出现，因为他们定义的都是天。非常容易让管理员混乱</td>
-</tr>
-</tbody>
-</table>
-<hr>
-<h1 id="rpm"><a href="#rpm" class="headerlink" title="rpm"></a>rpm</h1><ul>
-<li><code>rpm -qa</code>查询所安装的所有软件包</li>
-<li><code>rpm -e firefox-45.0.1-1.el6.centos.x86_64</code>卸载软件包</li>
-<li><code>rpm -e --nodeps firefox-45.0.1-1.el6.centos.x86_64</code>卸载软件包(不检测依赖)</li>
-<li><code>rpm –ivh firefox-45.0.1-1.el6.centos.x86_64</code>安装软件包</li>
-<li><code>rpm –ivh --nodeps firefox-45.0.1-1.el6.centos.x86_64</code>安装软件包(不检测依赖)</li>
-<li><code>-i</code>安装,<code>-v</code>显示详细信息,<code>-h</code>显示进度条,<code>--nodeps</code>不检测依赖进度</li>
-</ul>
+        <h1 id="配置用户信息"><a href="#配置用户信息" class="headerlink" title="配置用户信息"></a>配置用户信息</h1><p><code>git config --global user.name &quot;Your Name&quot;</code><br><code>git config --global user.email &quot;email@example.com&quot;</code></p>
+<h1 id="创建版本库"><a href="#创建版本库" class="headerlink" title="创建版本库"></a>创建版本库</h1><p><code>git init</code></p>
+<h1 id="添加文件到仓库"><a href="#添加文件到仓库" class="headerlink" title="添加文件到仓库"></a>添加文件到仓库</h1><p><code>git add readme.txt</code></p>
+<h1 id="提交文件到仓库"><a href="#提交文件到仓库" class="headerlink" title="提交文件到仓库"></a>提交文件到仓库</h1><p><code>git commit -m &quot;wrote a readme file&quot;</code></p>
+<h1 id="查看仓库当前状态"><a href="#查看仓库当前状态" class="headerlink" title="查看仓库当前状态"></a>查看仓库当前状态</h1><p><code>git status</code></p>
+<h1 id="查看对文件所做的修改"><a href="#查看对文件所做的修改" class="headerlink" title="查看对文件所做的修改"></a>查看对文件所做的修改</h1><p><code>git diff readme.txt</code></p>
+<h1 id="查看提交历史"><a href="#查看提交历史" class="headerlink" title="查看提交历史"></a>查看提交历史</h1><p><code>git log</code><br><code>git log --pretty=oneline</code></p>
+<h1 id="回退到历史版本"><a href="#回退到历史版本" class="headerlink" title="回退到历史版本"></a>回退到历史版本</h1><p><code>git reset --hard HEAD^</code><br><code>git reset --hard HEAD^^</code><br><code>git reset --hard HEAD^^^</code><br><code>git reset --hard HEAD~100</code><br><code>git reset --hard b4982cd</code></p>
+<h1 id="查看历史命令"><a href="#查看历史命令" class="headerlink" title="查看历史命令"></a>查看历史命令</h1><p><code>git reflog</code></p>
+<h1 id="查看工作区版本和版本库最新版本的区别"><a href="#查看工作区版本和版本库最新版本的区别" class="headerlink" title="查看工作区版本和版本库最新版本的区别"></a>查看工作区版本和版本库最新版本的区别</h1><p><code>git diff HEAD -- readme.txt</code></p>
+<h1 id="撤销工作区修改-回退到最近一次add或commit时的状态"><a href="#撤销工作区修改-回退到最近一次add或commit时的状态" class="headerlink" title="撤销工作区修改,回退到最近一次add或commit时的状态"></a>撤销工作区修改,回退到最近一次add或commit时的状态</h1><p><code>git checkout -- readme.txt</code></p>
+<h1 id="撤销暂存区修改"><a href="#撤销暂存区修改" class="headerlink" title="撤销暂存区修改"></a>撤销暂存区修改</h1><p><code>git reset HEAD readme.txt</code></p>
+<h1 id="删除文件"><a href="#删除文件" class="headerlink" title="删除文件"></a>删除文件</h1><p><code>git rm</code></p>
+<h1 id="创建SSH-Key"><a href="#创建SSH-Key" class="headerlink" title="创建SSH Key"></a>创建SSH Key</h1><p><code>ssh-keygen -t rsa -C &quot;youremail@example.com&quot;</code></p>
+<h1 id="ssh方式添加远程仓库"><a href="#ssh方式添加远程仓库" class="headerlink" title="ssh方式添加远程仓库"></a>ssh方式添加远程仓库</h1><p><code>git remote add origin git@github.com:2500639734/learngit.git</code></p>
+<h1 id="推送指定分支到远程仓库同时关联本地和远程分支-第一次"><a href="#推送指定分支到远程仓库同时关联本地和远程分支-第一次" class="headerlink" title="推送指定分支到远程仓库同时关联本地和远程分支,第一次"></a>推送指定分支到远程仓库同时关联本地和远程分支,第一次</h1><p><code>git push -u origin master</code></p>
+<h1 id="推送指定分支到远程仓库"><a href="#推送指定分支到远程仓库" class="headerlink" title="推送指定分支到远程仓库"></a>推送指定分支到远程仓库</h1><p><code>git push origin master</code></p>
+<h1 id="ssh方式克隆远程仓库"><a href="#ssh方式克隆远程仓库" class="headerlink" title="ssh方式克隆远程仓库"></a>ssh方式克隆远程仓库</h1><p><code>git clone &quot;your respoitory address&quot;</code></p>
+<h1 id="提交过程"><a href="#提交过程" class="headerlink" title="提交过程"></a>提交过程</h1><p>-》 <code>add</code>加入文件到暂存区 -》 <code>commit</code> -》 暂存区文件提交到本地仓库 -》 <code>push</code> 本地仓库文件推送到远程仓库</p>
+<h1 id="创建dev分支"><a href="#创建dev分支" class="headerlink" title="创建dev分支"></a>创建dev分支</h1><p><code>git branch dev</code></p>
+<h1 id="切换到dev分支"><a href="#切换到dev分支" class="headerlink" title="切换到dev分支"></a>切换到dev分支</h1><p><code>git checkouu dev</code></p>
+<h1 id="创建并切换到dev分支"><a href="#创建并切换到dev分支" class="headerlink" title="创建并切换到dev分支"></a>创建并切换到dev分支</h1><p><code>git checkout -b dev</code></p>
+<h1 id="查看当前分支"><a href="#查看当前分支" class="headerlink" title="查看当前分支"></a>查看当前分支</h1><p><code>git branch</code></p>
+<h1 id="dev分支合并到当前分支"><a href="#dev分支合并到当前分支" class="headerlink" title="dev分支合并到当前分支"></a>dev分支合并到当前分支</h1><p><code>git merge dev</code></p>
+<h1 id="合并分支禁用Fast-forward模式"><a href="#合并分支禁用Fast-forward模式" class="headerlink" title="合并分支禁用Fast forward模式"></a>合并分支禁用Fast forward模式</h1><p><code>git merge --no-ff -m &quot;merge with no-ff&quot; dev</code></p>
+<h1 id="删除dev分支"><a href="#删除dev分支" class="headerlink" title="删除dev分支"></a>删除dev分支</h1><p><code>git branch -d dev</code></p>
+<h1 id="删除未合并的分支"><a href="#删除未合并的分支" class="headerlink" title="删除未合并的分支"></a>删除未合并的分支</h1><p><code>git branch -D feature</code></p>
+<h1 id="查看分支图"><a href="#查看分支图" class="headerlink" title="查看分支图"></a>查看分支图</h1><p><code>git log --graph</code></p>
+<h1 id="查看分支图简要"><a href="#查看分支图简要" class="headerlink" title="查看分支图简要"></a>查看分支图简要</h1><p><code>git log --graph --pretty=oneline --abbrev-commit</code></p>
+<h1 id="解决冲突"><a href="#解决冲突" class="headerlink" title="解决冲突"></a>解决冲突</h1><p>手动修改合并失败的文件 -》 提交 -》 合并 -》 删除分支</p>
+<h1 id="储存当前工作区并在当前分支下创建临时分支"><a href="#储存当前工作区并在当前分支下创建临时分支" class="headerlink" title="储存当前工作区并在当前分支下创建临时分支"></a>储存当前工作区并在当前分支下创建临时分支</h1><p><code>git stash</code><br><code>git checkout -b issue-101</code></p>
+<h1 id="查看储存的工作区"><a href="#查看储存的工作区" class="headerlink" title="查看储存的工作区"></a>查看储存的工作区</h1><p><code>git stash list</code></p>
+<h1 id="恢复储存的工作区"><a href="#恢复储存的工作区" class="headerlink" title="恢复储存的工作区"></a>恢复储存的工作区</h1><p><code>git stash apply</code></p>
+<h1 id="删除储存的工作区"><a href="#删除储存的工作区" class="headerlink" title="删除储存的工作区"></a>删除储存的工作区</h1><p><code>git stash drop</code></p>
+<h1 id="恢复并删除储存的工作区"><a href="#恢复并删除储存的工作区" class="headerlink" title="恢复并删除储存的工作区"></a>恢复并删除储存的工作区</h1><p><code>git stash pop</code></p>
+<h1 id="查看远程仓库信息"><a href="#查看远程仓库信息" class="headerlink" title="查看远程仓库信息"></a>查看远程仓库信息</h1><p><code>git remote</code></p>
+<h1 id="查看远程仓库详细信息"><a href="#查看远程仓库详细信息" class="headerlink" title="查看远程仓库详细信息"></a>查看远程仓库详细信息</h1><p><code>git remote -v</code></p>
+<h1 id="推送本地master分支到远程仓库-远程仓库默认名称origin-没有权限则不显示地址"><a href="#推送本地master分支到远程仓库-远程仓库默认名称origin-没有权限则不显示地址" class="headerlink" title="推送本地master分支到远程仓库,远程仓库默认名称origin,没有权限则不显示地址"></a>推送本地master分支到远程仓库,远程仓库默认名称origin,没有权限则不显示地址</h1><p><code>git push origin master</code></p>
+<h1 id="克隆远程仓库的dev分支到本地"><a href="#克隆远程仓库的dev分支到本地" class="headerlink" title="克隆远程仓库的dev分支到本地"></a>克隆远程仓库的dev分支到本地</h1><p><code>git checkout -b dev origin/dev</code></p>
+<h1 id="推送本地dev分支的修改到远程仓库"><a href="#推送本地dev分支的修改到远程仓库" class="headerlink" title="推送本地dev分支的修改到远程仓库"></a>推送本地dev分支的修改到远程仓库</h1><p><code>git push origin dev</code></p>
+<h1 id="合并远程仓库dev分支"><a href="#合并远程仓库dev分支" class="headerlink" title="合并远程仓库dev分支"></a>合并远程仓库dev分支</h1><p><code>git branch --set-upstream-to=origin/dev dev</code><br><code>git pull</code></p>
+<h1 id="多人协作流程"><a href="#多人协作流程" class="headerlink" title="多人协作流程"></a>多人协作流程</h1><p>推送本地修改 <code>git push origin &lt;branch-name&gt;</code>  -》 推送失败尝试合并 <code>git pull</code>  -》 合并冲突则解决冲突,并在本地提交  -》 <code>git push origin &lt;branch-name&gt;</code>再次推送<br><code>git pull</code>提示<code>no tracking information</code>,则说明本地分支和远程分支的链接关系没有创建,用命令<code>git branch --set-upstream-to &lt;branch-name&gt; origin/&lt;branch-name&gt;</code></p>
+<h1 id="本地未push的分叉提交历史整理成直线"><a href="#本地未push的分叉提交历史整理成直线" class="headerlink" title="本地未push的分叉提交历史整理成直线"></a>本地未push的分叉提交历史整理成直线</h1><p><code>git rebase</code></p>
+<h1 id="当前分支打上标签"><a href="#当前分支打上标签" class="headerlink" title="当前分支打上标签"></a>当前分支打上标签</h1><p><code>git tag v1.0</code></p>
+<h1 id="查看标签"><a href="#查看标签" class="headerlink" title="查看标签"></a>查看标签</h1><p><code>git tag</code></p>
+<h1 id="查看标签信息"><a href="#查看标签信息" class="headerlink" title="查看标签信息"></a>查看标签信息</h1><p><code>git show v1.0</code></p>
+<h1 id="当前分支历史提交记录打上标签"><a href="#当前分支历史提交记录打上标签" class="headerlink" title="当前分支历史提交记录打上标签"></a>当前分支历史提交记录打上标签</h1><p><code>git tag v0.9 f52c633</code></p>
+<h1 id="删除本地标签"><a href="#删除本地标签" class="headerlink" title="删除本地标签"></a>删除本地标签</h1><p><code>git tag -d v0.9</code></p>
+<h1 id="推送v1-0标签到远程仓库"><a href="#推送v1-0标签到远程仓库" class="headerlink" title="推送v1.0标签到远程仓库"></a>推送v1.0标签到远程仓库</h1><p><code>git push origin v1.0</code></p>
+<h1 id="一次性推送尚未推送到远程仓库的标签"><a href="#一次性推送尚未推送到远程仓库的标签" class="headerlink" title="一次性推送尚未推送到远程仓库的标签"></a>一次性推送尚未推送到远程仓库的标签</h1><p><code>git push origin --tags</code></p>
+<h1 id="删除远程仓库标签"><a href="#删除远程仓库标签" class="headerlink" title="删除远程仓库标签"></a>删除远程仓库标签</h1><p><code>git tag -d v0.9</code><br><code>git push origin :refs/tags/v0.9</code></p>
+<h1 id="git终端显示颜色"><a href="#git终端显示颜色" class="headerlink" title="git终端显示颜色"></a>git终端显示颜色</h1><p><code>git config --global color.ui true</code></p>
+<h1 id="忽略文件-根目录加入-gitignore文件配置"><a href="#忽略文件-根目录加入-gitignore文件配置" class="headerlink" title="忽略文件,根目录加入.gitignore文件配置"></a>忽略文件,根目录加入.gitignore文件配置</h1><p><code>.gitignore</code></p>
+<h1 id="检查-gitignore文件是否正确"><a href="#检查-gitignore文件是否正确" class="headerlink" title="检查.gitignore文件是否正确"></a>检查.gitignore文件是否正确</h1><p><code>git check-ignore</code></p>
+<h1 id="强制添加已设定被忽略的文件"><a href="#强制添加已设定被忽略的文件" class="headerlink" title="强制添加已设定被忽略的文件"></a>强制添加已设定被忽略的文件</h1><p><code>git add -f App.class</code></p>
+<h1 id="配置命令别名"><a href="#配置命令别名" class="headerlink" title="配置命令别名"></a>配置命令别名</h1><p><code>git config --global alias.st status</code><br><code>git config --global alias.co checkout</code><br><code>git config --global alias.ci commit</code><br><code>git config --global alias.br branch</code><br><code>git config --global alias.unstage &#39;reset HEAD&#39;</code><br><code>git config --global alias.last &#39;log -1&#39;</code><br><code>git config --global alias.lg &quot;log --color --graph --pretty=format:&#39;%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)&lt;%an&gt;%Creset&#39; --abbrev-commit&quot;</code></p>
+<h1 id="删除配置的别名"><a href="#删除配置的别名" class="headerlink" title="删除配置的别名"></a>删除配置的别名</h1><p>git仓库配置在<code>.git/config</code>文件中,删除<code>[alias]</code>下配置的别名<br>当前用户git目录在用户主目录下的一个隐藏文件<code>.gitconfig</code>中,删除<code>[alias]</code>下配置的别名</p>
+<h1 id="搭建git服务器"><a href="#搭建git服务器" class="headerlink" title="搭建git服务器"></a>搭建git服务器</h1><p>1.准备一台<code>linux</code>服务器,拥有<code>sudo</code>权限的账号<br>2.<code>sudo apt-get install git</code> 安装<code>git</code><br>3.<code>sudo adduser git</code> 创建一个git用户,用来运行<code>git</code>服务<br>4.收集所有需要登录的用户的公钥,就是他们自己的<code>id_rsa.pub</code>文件,把所有公钥导入到<code>/home/git/.ssh/authorized_keys</code>文件里,一行一个,如果没有<code>authorized_keys</code>文件直接创建一个<br>5.<code>sudo git init --bare sample.git</code> 初始化git仓库,先选定一个目录作为仓库,然后在该目录下执行这个命令,服务器上<code>git</code>仓库以<code>.git</code>结尾,并且纯粹只是为了共享,只是个裸仓库没有工作区<br>6.编辑<code>/etc/passwd</code>文件,把<code>git:x:1001:1001:,,,:/home/git:/bin/bash改为git:x:1001:1001:,,,:/home/git:/usr/bin/git-shell</code>,这样，<code>git</code>用户可以正常通过<code>ssh</code>使用<code>git</code>，但无法登录<code>shell</code>，因为我们为<code>git</code>用户指定的<code>git-shell</code>每次一登录就自动退出<br>7.<code>git clone git@server:/srv/sample.git</code>在本地克隆远程仓库,这里假设远程仓库路径是<code>/srv/sample.git</code><br>8.正常流程开发,提交<br>9.如果团队人员过多,添加公匙费劲,可以用<code>Gitosis</code>来管理公钥,如果要做权限控制,也可以用<code>Gitosis</code></p>
 
       
     </div>
@@ -918,7 +562,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Linux基础/" rel="tag"><i class="fa fa-tags"></i> Linux基础</a>
+            <a href="/tags/Git/" rel="tag"><i class="fa fa-tags"></i> Git</a>
           
         </div>
       
@@ -931,8 +575,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/12/24/Linux基础配置/" rel="next" title="Linux基础配置">
-                <i class="fa fa-chevron-left"></i> Linux基础配置
+              <a href="/2018/12/26/LinuxShell脚本编程/" rel="next" title="LinuxShell脚本编程">
+                <i class="fa fa-chevron-left"></i> LinuxShell脚本编程
               </a>
             
           </div>
@@ -940,10 +584,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/12/26/LinuxShell脚本编程/" rel="prev" title="LinuxShell脚本编程">
-                LinuxShell脚本编程 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -1128,7 +768,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#帮助命令"><span class="nav-number">1.</span> <span class="nav-text">帮助命令</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#常用快捷键"><span class="nav-number">2.</span> <span class="nav-text">常用快捷键</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#文件命令"><span class="nav-number">3.</span> <span class="nav-text">文件命令</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#vi编辑命令"><span class="nav-number">4.</span> <span class="nav-text">vi编辑命令</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#时间日期"><span class="nav-number">5.</span> <span class="nav-text">时间日期</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#用户管理"><span class="nav-number">6.</span> <span class="nav-text">用户管理</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#用户组管理"><span class="nav-number">7.</span> <span class="nav-text">用户组管理</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#文件权限"><span class="nav-number">8.</span> <span class="nav-text">文件权限</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#磁盘分区"><span class="nav-number">9.</span> <span class="nav-text">磁盘分区</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#搜索查找"><span class="nav-number">10.</span> <span class="nav-text">搜索查找</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#进程线程"><span class="nav-number">11.</span> <span class="nav-text">进程线程</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#压缩解压缩"><span class="nav-number">12.</span> <span class="nav-text">压缩解压缩</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#后台服务管理"><span class="nav-number">13.</span> <span class="nav-text">后台服务管理</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#系统定时任务"><span class="nav-number">14.</span> <span class="nav-text">系统定时任务</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#rpm"><span class="nav-number">15.</span> <span class="nav-text">rpm</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#配置用户信息"><span class="nav-number">1.</span> <span class="nav-text">配置用户信息</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#创建版本库"><span class="nav-number">2.</span> <span class="nav-text">创建版本库</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#添加文件到仓库"><span class="nav-number">3.</span> <span class="nav-text">添加文件到仓库</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#提交文件到仓库"><span class="nav-number">4.</span> <span class="nav-text">提交文件到仓库</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#查看仓库当前状态"><span class="nav-number">5.</span> <span class="nav-text">查看仓库当前状态</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#查看对文件所做的修改"><span class="nav-number">6.</span> <span class="nav-text">查看对文件所做的修改</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#查看提交历史"><span class="nav-number">7.</span> <span class="nav-text">查看提交历史</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#回退到历史版本"><span class="nav-number">8.</span> <span class="nav-text">回退到历史版本</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#查看历史命令"><span class="nav-number">9.</span> <span class="nav-text">查看历史命令</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#查看工作区版本和版本库最新版本的区别"><span class="nav-number">10.</span> <span class="nav-text">查看工作区版本和版本库最新版本的区别</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#撤销工作区修改-回退到最近一次add或commit时的状态"><span class="nav-number">11.</span> <span class="nav-text">撤销工作区修改,回退到最近一次add或commit时的状态</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#撤销暂存区修改"><span class="nav-number">12.</span> <span class="nav-text">撤销暂存区修改</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#删除文件"><span class="nav-number">13.</span> <span class="nav-text">删除文件</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#创建SSH-Key"><span class="nav-number">14.</span> <span class="nav-text">创建SSH Key</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#ssh方式添加远程仓库"><span class="nav-number">15.</span> <span class="nav-text">ssh方式添加远程仓库</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#推送指定分支到远程仓库同时关联本地和远程分支-第一次"><span class="nav-number">16.</span> <span class="nav-text">推送指定分支到远程仓库同时关联本地和远程分支,第一次</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#推送指定分支到远程仓库"><span class="nav-number">17.</span> <span class="nav-text">推送指定分支到远程仓库</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#ssh方式克隆远程仓库"><span class="nav-number">18.</span> <span class="nav-text">ssh方式克隆远程仓库</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#提交过程"><span class="nav-number">19.</span> <span class="nav-text">提交过程</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#创建dev分支"><span class="nav-number">20.</span> <span class="nav-text">创建dev分支</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#切换到dev分支"><span class="nav-number">21.</span> <span class="nav-text">切换到dev分支</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#创建并切换到dev分支"><span class="nav-number">22.</span> <span class="nav-text">创建并切换到dev分支</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#查看当前分支"><span class="nav-number">23.</span> <span class="nav-text">查看当前分支</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#dev分支合并到当前分支"><span class="nav-number">24.</span> <span class="nav-text">dev分支合并到当前分支</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#合并分支禁用Fast-forward模式"><span class="nav-number">25.</span> <span class="nav-text">合并分支禁用Fast forward模式</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#删除dev分支"><span class="nav-number">26.</span> <span class="nav-text">删除dev分支</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#删除未合并的分支"><span class="nav-number">27.</span> <span class="nav-text">删除未合并的分支</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#查看分支图"><span class="nav-number">28.</span> <span class="nav-text">查看分支图</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#查看分支图简要"><span class="nav-number">29.</span> <span class="nav-text">查看分支图简要</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#解决冲突"><span class="nav-number">30.</span> <span class="nav-text">解决冲突</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#储存当前工作区并在当前分支下创建临时分支"><span class="nav-number">31.</span> <span class="nav-text">储存当前工作区并在当前分支下创建临时分支</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#查看储存的工作区"><span class="nav-number">32.</span> <span class="nav-text">查看储存的工作区</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#恢复储存的工作区"><span class="nav-number">33.</span> <span class="nav-text">恢复储存的工作区</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#删除储存的工作区"><span class="nav-number">34.</span> <span class="nav-text">删除储存的工作区</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#恢复并删除储存的工作区"><span class="nav-number">35.</span> <span class="nav-text">恢复并删除储存的工作区</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#查看远程仓库信息"><span class="nav-number">36.</span> <span class="nav-text">查看远程仓库信息</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#查看远程仓库详细信息"><span class="nav-number">37.</span> <span class="nav-text">查看远程仓库详细信息</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#推送本地master分支到远程仓库-远程仓库默认名称origin-没有权限则不显示地址"><span class="nav-number">38.</span> <span class="nav-text">推送本地master分支到远程仓库,远程仓库默认名称origin,没有权限则不显示地址</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#克隆远程仓库的dev分支到本地"><span class="nav-number">39.</span> <span class="nav-text">克隆远程仓库的dev分支到本地</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#推送本地dev分支的修改到远程仓库"><span class="nav-number">40.</span> <span class="nav-text">推送本地dev分支的修改到远程仓库</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#合并远程仓库dev分支"><span class="nav-number">41.</span> <span class="nav-text">合并远程仓库dev分支</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#多人协作流程"><span class="nav-number">42.</span> <span class="nav-text">多人协作流程</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#本地未push的分叉提交历史整理成直线"><span class="nav-number">43.</span> <span class="nav-text">本地未push的分叉提交历史整理成直线</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#当前分支打上标签"><span class="nav-number">44.</span> <span class="nav-text">当前分支打上标签</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#查看标签"><span class="nav-number">45.</span> <span class="nav-text">查看标签</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#查看标签信息"><span class="nav-number">46.</span> <span class="nav-text">查看标签信息</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#当前分支历史提交记录打上标签"><span class="nav-number">47.</span> <span class="nav-text">当前分支历史提交记录打上标签</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#删除本地标签"><span class="nav-number">48.</span> <span class="nav-text">删除本地标签</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#推送v1-0标签到远程仓库"><span class="nav-number">49.</span> <span class="nav-text">推送v1.0标签到远程仓库</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#一次性推送尚未推送到远程仓库的标签"><span class="nav-number">50.</span> <span class="nav-text">一次性推送尚未推送到远程仓库的标签</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#删除远程仓库标签"><span class="nav-number">51.</span> <span class="nav-text">删除远程仓库标签</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#git终端显示颜色"><span class="nav-number">52.</span> <span class="nav-text">git终端显示颜色</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#忽略文件-根目录加入-gitignore文件配置"><span class="nav-number">53.</span> <span class="nav-text">忽略文件,根目录加入.gitignore文件配置</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#检查-gitignore文件是否正确"><span class="nav-number">54.</span> <span class="nav-text">检查.gitignore文件是否正确</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#强制添加已设定被忽略的文件"><span class="nav-number">55.</span> <span class="nav-text">强制添加已设定被忽略的文件</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#配置命令别名"><span class="nav-number">56.</span> <span class="nav-text">配置命令别名</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#删除配置的别名"><span class="nav-number">57.</span> <span class="nav-text">删除配置的别名</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#搭建git服务器"><span class="nav-number">58.</span> <span class="nav-text">搭建git服务器</span></a></li></ol></div>
             
 
           </div>
